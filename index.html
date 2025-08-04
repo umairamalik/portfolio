@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -9,13 +10,13 @@
     <meta name="author" content="Umaira">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-	<meta property="og:site_name" content="" />
-	<meta property="og:site" content="" />
-	<meta property="og:title" content=""/>
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta name="twitter:card" content="summary_large_image">
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
     <title>My Portfolio</title>
@@ -23,749 +24,597 @@
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
-            --accent-color: #f093fb;
-            --text-light: #ffffff;
-            --text-dark: #333333;
-            --bg-dark: #1a1a2e;
-            --bg-light: #f8f9fa;
-        }
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/faviconU.png">
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FB5M58CEFY"></script>
+	<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            overflow-x: hidden;
-        }
-
-        /* Animated Background */
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Floating Particles */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 20s infinite linear;
-        }
-
-        .particle:nth-child(1) { width: 20px; height: 20px; left: 10%; animation-delay: 0s; }
-        .particle:nth-child(2) { width: 15px; height: 15px; left: 20%; animation-delay: 2s; }
-        .particle:nth-child(3) { width: 25px; height: 25px; left: 30%; animation-delay: 4s; }
-        .particle:nth-child(4) { width: 18px; height: 18px; left: 40%; animation-delay: 6s; }
-        .particle:nth-child(5) { width: 22px; height: 22px; left: 50%; animation-delay: 8s; }
-        .particle:nth-child(6) { width: 16px; height: 16px; left: 60%; animation-delay: 10s; }
-        .particle:nth-child(7) { width: 30px; height: 30px; left: 70%; animation-delay: 12s; }
-        .particle:nth-child(8) { width: 12px; height: 12px; left: 80%; animation-delay: 14s; }
-        .particle:nth-child(9) { width: 28px; height: 28px; left: 90%; animation-delay: 16s; }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
-        }
-
-        /* Glass Morphism Effect */
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        }
-
-        /* Navigation */
-        .navbar {
-            background: rgba(255, 255, 255, 0.1) !important;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .navbar-brand {
-            color: var(--text-light) !important;
-            font-weight: 600;
-            font-size: 1.5rem;
-        }
-
-        .nav-link {
-            color: var(--text-light) !important;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-color) !important;
-            transform: translateY(-2px);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--accent-color);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* Header */
-        .header {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            color: var(--text-light);
-        }
-
-        .text-container {
-            z-index: 2;
-            position: relative;
-        }
-
-        .header h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Buttons */
-        .btn-custom {
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            margin: 10px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-solid {
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            border: none;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .btn-custom:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        /* Sections */
-        .section {
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .bg-glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: var(--text-light);
-        }
-
-        /* Service Cards */
-        .service-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-            color: var(--text-light);
-            height: 100%;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .service-card i {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-
-        .service-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        /* Project Cards */
-        .project-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-card-body {
-            padding: 1.5rem;
-            color: var(--text-light);
-        }
-
-        /* Testimonial Cards */
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 1rem;
-            color: var(--text-light);
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-
-        /* Contact Form */
-        .contact-form {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 3rem;
-        }
-
-        .form-control {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            color: var(--text-light);
-            padding: 12px 20px;
-        }
-
-        .form-control:focus {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 0.2rem rgba(240, 147, 251, 0.25);
-            color: var(--text-light);
-        }
-
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Footer */
-        .footer {
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 2rem 0;
-            color: var(--text-light);
-            text-align: center;
-        }
-
-        .social-links a {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            margin: 0 15px;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-            transform: translateY(-3px);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--accent-color);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-color);
-        }
-    </style>
+  gtag('config', 'G-FB5M58CEFY');
+</script>
 </head>
-<body>
-    <!-- Animated Background -->
-    <div class="animated-bg"></div>
-    
-    <!-- Floating Particles -->
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+<body data-spy="scroll" data-target=".fixed-top">
     
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#header">Umaira</a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!-- Image Logo -->
+            <a  class="navbar-brand logo-image" href="index.html"><img style="height:45px; width:110px" src="images/favicon-umair.png" alt="Umaira" ></a>  
+
+              
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Umaira</a> -->
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#header">Home</a>
+                        <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link page-scroll" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link page-scroll" href="#services">Services</a>
                     </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item page-scroll" href="project.html">Project Details</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
+                        </div>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
-                <div class="social-links ms-3">
-                    <a href="http://linkedin.com/in/umairaahad/"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com/umairamalik_"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-    </nav>
+                <span class="nav-item social-icons">
+                    <span class="fa-stack">
+                        <a href="http://linkedin.com/in/umairaahad/">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://twitter.com/umairamalik_">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-twitter fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </span>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
 
     <!-- Header -->
     <header id="header" class="header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <div class="text-container">
-                        <h1>I love to create beautiful and efficient websites and Software</h1>
-                        <p class="lead mb-4">Transforming ideas into digital experiences with creativity and precision</p>
-                        <a class="btn-custom btn-solid" href="#about">Discover More</a>
-                        <a class="btn-custom btn-outline" href="#contact"><i class="fas fa-user me-2"></i>Contact Me</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+                        <h1 class="h1-large">I love to create beautiful and efficient websites and Softwares</h1>
+                        <a class="btn-solid-lg page-scroll" href="#about">Discover</a>
+                        <a class="btn-outline-lg page-scroll" href="#contact"><i class="fas fa-user"></i>Contact Me</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
 
-    <!-- About -->
-    <section id="about" class="section bg-glass">
+
+    <!-- About-->
+    <div id="about" class="basic-1 bg-gray">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="section-title fade-in">About Me</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 fade-in">
-                    <div class="service-card">
-                        <h3>Hi there I'm Umaira,</h3>
+                <div class="col-lg-4">
+                    <div class="text-container first">
+                        <h2>Hi there I'm Umaira,</h2>
                         <p>And I love to create beautiful and efficient websites for my customers. I love going through the entire process with the customer from concept, to design and then development and launch</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="service-card">
-                        <div class="mb-3">
-                            <small class="text-muted">2023 - PRESENT</small>
-                            <h5>Freelance Developer</h5>
-                            <p>Working happily on my own web projects, delivering 15+ successful projects to satisfied clients.</p>
-                        </div>
-                        <div>
-                            <small class="text-muted">Technical + Creative</small>
-                            <h5>Design-Driven Web Development</h5>
-                            <p>From Freelance Gigs to Startup Solutions. Created clean, responsive, and SEO-friendly sites for multiple clients</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="service-card">
-                        <div class="mb-3">
-                            <small class="text-muted">2018 - 2019</small>
-                            <h5>Web Developer</h5>
-                            <p>Beautiful projects for WebTech Technologies</p>
-                        </div>
-                        <div>
-                            <small class="text-muted">2021 - 2023</small>
-                            <h5>Software Developer</h5>
-                            <p>Beautiful projects for Neo Kinetic Services</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container second">
+                        <div class="time">2023 - PRESENT</div>
+                        <h6>Freelance  Developer</h6>
+                        <p>Working happily on my own web projects, delivering 15+ successful projects to satisfied clients.</p>
+                       
+                        <div class="time">Technical + Creative</div>
+                        <h6>Design-Driven Web Development</h6>
+                       <p>From Freelance Gigs to Startup Solutions
+Created clean, responsive, and SEO-friendly sites for multiple clients</p>
+                       
+                        
+                    </div> <!-- end of text-container -->
+			 
+                </div> <!-- end of col --><div class="col-lg-4">
+                    <div class="text-container third">
+                        <div class="time">2018 - 2019</div>
+                        <h6> Web Developer</h6>
+                        <p>Beautiful projects for WebTech Technologies</p>
+                        <div class="time">2021 - 2023</div>
+                        <h6> Software Developer</h6>
+                        <p>Beautiful projects for Neo Kinetic Services</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+                </div> <!-- end of basic-1 -->
+    
+   
+    <!-- end of about -->
+
 
     <!-- Services -->
-    <section id="services" class="section">
+    <div id="services" class="basic-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title fade-in">Offered Services</h2>
-                    <p class="text-center text-light mb-5 fade-in">Web design and development have been my bread and butter for more than 3 years. During that time I've discovered that I can help startups and companies with the following services</p>
-                </div>
-            </div>
+                    <h2 class="h2-heading">Offered services</h2>
+                    <p class="p-heading">Web design and development have been my bread and butter for more than 3 years. During that time I've discovered that I can help startups and companies with the following services</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
             <div class="row">
-                <div class="col-lg-4 fade-in">
-                    <div class="service-card text-center">
+                <div class="col-lg-4">
+                    <div class="text-box">
                         <i class="far fa-gem"></i>
                         <h4>DESIGN</h4>
                         <p>Successful online projects start with good design. It establishes a solid foundation for future development and allows for long term growth</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="service-card text-center">
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box">
                         <i class="fas fa-code"></i>
                         <h4>DEVELOPMENT</h4>
                         <p>I can code my own designs or even use the customer's design as base. My focus is to generate clean code that's well structured for reliability</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="service-card text-center">
-                        <i class="fas fa-search"></i>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box">
+                        <i class="fas fa-tv"></i>
                         <h4>BASIC SEO</h4>
                         <p>I can setup your project to use basic SEO principles which will push your project to the first page on search engines and save you ads money</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-lg-4 fade-in">
-                    <div class="service-card text-center">
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+     
+	
+        
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-box">
                         <i class="fas fa-spider"></i>
                         <h4>Web Scraping</h4>
-                        <p>I build custom web scraping solutions to extract structured data from websites, whether for competitor analysis, product tracking, lead generation, or content aggregation.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="service-card text-center">
+                        <p>I build custom web scraping solutions to extract structured data from websites, whether for competitor analysis, product tracking, lead generation, or content aggregation. My scripts are optimized for speed, accuracy, and scalability — using tools like Python, BeautifulSoup, Selenium, and Puppeteer. Data can be delivered in formats like CSV, JSON, or integrated directly into your app or dashboard.</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box">
                         <i class="fas fa-brain"></i>
-                        <h4>AI-Powered Search & RAG</h4>
-                        <p>I create smart search systems that let users ask questions and get accurate answers from custom data like documents or websites using RAG technology.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="service-card text-center">
+                        <h4>AI-Powered Search & RAG (Retrieval-Augmented Generation)
+</h4>
+                        <p>I create smart search systems that let users ask questions and get accurate answers from custom data like documents or websites. Using Retrieval-Augmented Generation (RAG), these tools combine AI with your content for fast, context-aware results.</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box">
                         <i class="fas fa-robot"></i>
                         <h4>AI Agent Development</h4>
-                        <p>I design intelligent AI agents that automate tasks, enhance decision-making, and deliver personalized user experiences tailored to your business needs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                        <p>I design intelligent AI agents that automate tasks, enhance decision-making, and deliver personalized user experiences. Whether it's a chatbot, virtual assistant, or autonomous workflow bot, I leverage tools like OpenAI, LangChain, and vector databases to build context-aware, goal-driven agents tailored to your business needs.</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3-->
+    <!-- end of services -->
+
+
+    <!-- Details -->
+	<div class="split">
+		<div class="area-1">
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2 bg-gray">
+            <div class="container">    
+                <div class="row">
+                    <div class="col-lg-12">     
+                        
+                        <!-- Text Container -->
+                        <div class="text-container">
+                            <h2>Why Work With Me</h2>
+                            <p>I am a great communicator and love to invest the necessary time to understand the customer's problem very well</p>
+                            <h5>DESIGN TOOLS</h5>
+                            <p>My favorite design tools are Photoshop and Canva but I can create designs in Figma, Sketch and Adobe XD too</p>
+                            
+  				  <h3>Development Skills</h3>
+				    
+				        <p>Java,Python, ASP.NET, PHP</p>
+		
+				        <p>Android Development</p>
+				        <p>Salesforce Development</p>
+				    
+                          
+                            
+                            <div class="icons-container">
+                                <img src="images/details-icon-photoshop.png" alt="alternative">
+                                <img src="images/details-icon-html.png" alt="alternative">
+                                <img src="images/details-icon-css.png" alt="alternative">
+                                <img src="images/details-icon-bootstrap.png" alt="alternative">
+                                <img src="images/details-icon-javascript.png" alt="alternative">
+                                <img src="images/details-icon-python.png" alt="alternative">
+                                <img src="images/details-icon-salesforce.png" alt="alternative">
+                            </div> <!-- end of icons-container -->
+                        </div> <!-- end of text-container -->
+                        <!-- end of text container -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of split -->
+    <!-- end of details -->
+
 
     <!-- Projects -->
-    <section id="projects" class="section bg-glass">
+    <div id="projects" class="basic-3">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title fade-in">Delivered Projects</h2>
-                    <p class="text-center text-light mb-5 fade-in">Listed below are some of the most representative projects I've worked on. They range from basic web design for presentation sites to advanced web applications</p>
-                </div>
-            </div>
+                    <h2 class="h2-heading">Delivered projects</h2>
+                    <p class="p-heading">Listed below are some of the most representative projects I've worked on. They range from basic web design for presentation sites to advanced web applications</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
             <div class="row">
-                <div class="col-lg-6 fade-in">
-                    <div class="project-card">
-                        <div class="project-card-body">
-                            <h5>Resume Parsing Web Application</h5>
-                            <p><strong>For:</strong> Neo Kinetic Services</p>
-                            <p>Advanced web application for parsing and analyzing resumes with AI-powered insights.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 fade-in">
-                    <div class="project-card">
-                        <div class="project-card-body">
-                            <h5>CRM Tool</h5>
-                            <p><strong>For:</strong> Neo Kinetic Services</p>
-                            <p>Designed and Developed CRM Tool for Storing and Maintaining Customer Data with advanced analytics.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 fade-in">
-                    <div class="project-card">
-                        <div class="project-card-body">
-                            <h5>Web Scraping Tool</h5>
-                            <p><strong>For:</strong> Neo Kinetic Services</p>
-                            <p>Created a Custom web Scraping Tool with automated data extraction and processing capabilities.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 fade-in">
-                    <div class="project-card">
-                        <div class="project-card-body">
-                            <h5>Event Management System</h5>
-                            <p><strong>For:</strong> Baba Ghulam Shah Badshah University</p>
-                            <p>Comprehensive event management platform with booking, scheduling, and analytics features.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <div class="image-container">
+                            <a href="project.html">
+                                <img class="img-fluid" src="images/Project-1.png" alt="alternative">
+                            </a>
+                        </div> <!-- end of image-container -->
+                        <p><strong>For:</strong> Neo Kinetic Services, <strong>Project:</strong> Resume Parsing Web Application  <a class="blue" href="project.html">details</a></p>
+                    </div> <!-- end of text-container -->
+                    <div class="text-container">
+                        <div class="image-container">
+                            <a href="project.html">
+                                <img class="img-fluid" src="images/Project-2.png" alt="alternative">
+                            </a>
+                        </div> <!-- end of image-container -->
+                        <p><strong>For:</strong> Neo Kinetic Services, <strong>Project:</strong> Designed and Developed CRM Tool for Storing and Maintaining Customer Data  <a class="blue" href="project.html">details</a></p>
+                    </div> <!-- end of text-container -->
+                    <div class="text-container">
+                        <div class="image-container">
+                            <a href="project.html">
+                                <img class="img-fluid" src="images/Project-3.png" alt="alternative">
+                            </a>
+                        </div> <!-- end of image-container -->
+                        <p><strong>For:</strong> Neo Kinetic Services, <strong>Project:</strong> Created a Custom web Scraping Tool  <a class="blue" href="project.html">details</a></p>
+                    </div> <!-- end of text-container -->
+                    <div class="text-container">
+                        <div class="image-container">
+                            <a href="project.html">
+                                <img class="img-fluid" src="images/Project-4.png" alt="alternative">
+                            </a>
+                        </div> <!-- end of image-container -->
+                        <p><strong>For:</strong> Baba Ghulam Shah Badshah University, <strong>Project:</strong> Event Mangement System  <a class="blue" href="project.html">details</a></p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3 -->
+    <!-- end of projects -->
+
+
+    
+
 
     <!-- Testimonials -->
-    <section class="section">
+    <div class="cards-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title fade-in">Client Testimonials</h2>
-                </div>
-            </div>
+                    <h2 class="h2-heading">A few words from people that chose to work with me</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
             <div class="row">
-                <div class="col-lg-4 fade-in">
-                    <div class="testimonial-card">
-                        <p>"Loved to work with Umaira she's such an awesome developer with great attention to details. She also has a great eye for design"</p>
-                        <div class="mt-3">
-                            <h6>Puneet Bharadwaj</h6>
-                            <small>Managing Director & CEO - Neo Kinetic Services</small>
+                <div class="col-lg-12">
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="testimonial-text">“Loved to work with Umaira she's such an awesome developer with great attention to details. She also has a great eye for design”</p>
+                            <div class="details">
+                                <img src="images/puneet.jpg" alt="alternative">
+                                <div class="text">
+                                    <div class="testimonial-author">Puneet Bharadwaj</div>
+                                    <div class="occupation">Managing Director & CEO - Neo Kinetic Services</div>
+                                </div> <!-- end of text -->
+                            </div> <!-- end of testimonial-details -->
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="testimonial-card">
-                        <p>"Umaira is a skilled developer which will do everything possible to deliver the project on time and I really appreciate that"</p>
-                        <div class="mt-3">
-                            <h6>Vrajesh Sheth</h6>
-                            <small>Director - Incapsulate</small>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="testimonial-text">“Umaira is a skilled developer which will do everything possible to deliver the project on time and I really appreciate that”</p>
+                            <div class="details">
+                                <img src="images/v.jpg" alt="alternative">
+                                <div class="text">
+                                    <div class="testimonial-author">Vrajesh Sheth</div>
+                                    <div class="occupation">Director - Incapsulate</div>
+                                </div> <!-- end of text -->
+                            </div> <!-- end of testimonial-details -->
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="testimonial-card">
-                        <p>"So glad we started working with Umaira. We've used many times her design and development skills for our inhouse online projects"</p>
-                        <div class="mt-3">
-                            <h6>Nisha Bangera</h6>
-                            <small>Assistant Vice President - Neo Kinetic Services</small>
+                    <!-- end of card -->
+
+                    
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="testimonial-text">“So glad we started working with Umaira. We've used many times her design and development skills for our inhouse online projects”</p>
+                            <div class="details">
+                                <img src="images/n.jpg" alt="alternative">
+                                <div class="text">
+                                    <div class="testimonial-author">Nisha Bangera</div>
+                                    <div class="occupation">Assistant Vice President  - Neo Kinetic Services</div>
+                                </div> <!-- end of text -->
+                            </div> <!-- end of testimonial-details -->
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of testimonials -->
+
+
+    <!-- Section Divider -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <hr class="section-divider">
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    <!-- end of section divider -->
+
+
+    <!-- Questions -->
+    <div class="accordion-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">Frequent questions</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How can I contact you and quickly get a quote for my online project?
+                                </button>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Do you create designs from the ground up or you are using themes?
+                                </button>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Will I receive any included maintenance or warranty after project delivery?
+                                </button>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    If something goes wrong with the project can I have my money back?
+                                </button>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What's your preferred method of payment and do you need an advance?
+                                </button>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end of accordion -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of accordion-1 -->
+    <!-- end of questions -->
+
+
 
     <!-- Contact -->
-    <section id="contact" class="section bg-glass">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="section-title fade-in">Contact Details</h2>
-                    <p class="text-center text-light mb-5 fade-in">For any type of online project please don't hesitate to get in touch with me.</p>
-                    
-                    <div class="contact-form fade-in">
-                        <form id="contactForm">
-                            <div class="mb-3">
-                                <input type="text" name="name" class="form-control" placeholder="Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" name="email" class="form-control" placeholder="Email" required>
-                            </div>
-                            <div class="mb-3">
-                                <textarea name="message" class="form-control" rows="5" placeholder="Project details" required></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn-custom btn-solid">Send Message</button>
-                            </div>
-                        </form>
-                        
-                        <div id="successMessage" style="display:none;" class="text-center mt-4">
-                            <h4 class="text-light">Thank you for your message. We will get back to you soon!</h4>
-                        </div>
+<div id="contact" class="form-1 bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Contact details</h2>
+                <p class="p-heading">For any type of online project please don't hesitate to get in touch with me.</p>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <!-- Contact Form -->
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control-input" id="cname" required>
+                        <label class="label-control" for="cname">Name</label>
                     </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control-input" id="cemail" required>
+                        <label class="label-control" for="cemail">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control-textarea" id="cmessage" required></textarea>
+                        <label class="label-control" for="cmessage">Project details</label>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="form-control-submit-button">Submit</button>
+                    </div>
+                </form>
+                <!-- end of contact form -->
+                
+                <!-- Success Message -->
+                <div id="successMessage" style="display:none;">
+                    <h3>Thank you for your message. We will get back to you soon!</h3>
                 </div>
-            </div>
-        </div>
-    </section>
+                <!-- end of success message -->
+
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of form-1 -->
 
     <!-- Footer -->
-    <footer class="footer">
+    <div class="footer bg-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="social-links mb-3">
-                        <a href="https://twitter.com/umairamalik_"><i class="fab fa-twitter"></i></a>
-                        <a href="http://linkedin.com/in/umaira-30528b178"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/freelancesd/"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <p>&copy; 2024 Umaira Ahad. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+                    <div class="social-container">
+                        <!-- <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span> -->
+                        <span class="fa-stack">
+                            <a href="https://twitter.com/umairamalik_">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#http://linkedin.com/in/umaira-30528b178">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://www.instagram.com/freelancesd/">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <!-- <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </span> -->
+                    </div> <!-- end of social-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+	    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="umairaahad" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/umairaahad?trk=profile-badge">Umaira Malik</a></div>
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Copyright -->
+    <div class="copyright bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a class="no-line" href="#your-link">Umaira Ahad </a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+
+        
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
     
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+<script>
+    $(document).ready(function() {
+        $('#contactForm').on('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            var formData = $(this).serialize(); // Serialize the form data
+
+            $.ajax({
+                url: 'https://formspree.io/f/mgvwwdaj', // Formspree endpoint
+                method: 'POST',
+                data: formData,
+                dataType: 'json',
+                success: function(response) {
+                    $('#contactForm')[0].reset(); // Reset the form fields
+                    $('#contactForm').hide(); // Hide the form
+                    $('#successMessage').show(); // Show the success message
+                },
+                error: function(err) {
+                    alert('There was an error sending your message. Please try again later.');
                 }
             });
         });
+    });
+</script>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
 
-        // Contact form submission
-        $(document).ready(function() {
-            $('#contactForm').on('submit', function(event) {
-                event.preventDefault();
-                
-                // Simulate form submission
-                $('#contactForm').hide();
-                $('#successMessage').show();
-                
-                // Reset form after 3 seconds
-                setTimeout(() => {
-                    $('#contactForm')[0].reset();
-                    $('#
+</body>
+</html>
+
