@@ -27,7 +27,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-	
+	<link href="css/custom.css" rel="stylesheet">
 	<!-- Favicon  -->
     <link rel="icon" href="images/faviconU.png">
 	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -44,10 +44,28 @@
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     <!-- Chatbot -->
-<div id="chatbot-root">
-  <!-- This will load chatbot.html -->
-  <iframe src="chatbot.html" style="border: none; width: 0; height: 0;"></iframe>
+<!-- Chatbot Widget -->
+<div id="chatbot-container">
+  <div id="chatbot-toggle">💬</div>
+
+  <div id="chatbot-box">
+    <div id="chatbot-header">
+      <span>Umaira's AI Assistant</span>
+      <button id="chatbot-close">&times;</button>
+    </div>
+
+    <div id="chatbot-messages"></div>
+
+    <div id="chatbot-input-section">
+      <input id="chatbot-input" type="text" placeholder="Type your message..." />
+      <button id="chatbot-send">➤</button>
+    </div>
+  </div>
 </div>
+
+<link rel="stylesheet" href="chatbot.css" />
+<script type="module" src="chatbot.js"></script>
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
@@ -276,53 +294,67 @@ Created clean, responsive, and SEO-friendly sites for multiple clients</p>
     <!-- end of details -->
 
 
-    <!-- Projects -->
-    <div id="projects" class="basic-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">Delivered projects</h2>
-                    <p class="p-heading">Listed below are some of the most representative projects I've worked on. They range from basic web design for presentation sites to advanced web applications</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/Project-1.png" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Neo Kinetic Services, <strong>Project:</strong> Resume Parsing Web Application  <a class="blue" href="project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/Project-2.png" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Neo Kinetic Services, <strong>Project:</strong> Designed and Developed CRM Tool for Storing and Maintaining Customer Data  <a class="blue" href="project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/Project-3.png" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Neo Kinetic Services, <strong>Project:</strong> Created a Custom web Scraping Tool  <a class="blue" href="project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/Project-4.png" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Baba Ghulam Shah Badshah University, <strong>Project:</strong> Event Mangement System  <a class="blue" href="project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-3 -->
+   <!-- Projects -->
+<div id="projects" class="basic-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="h2-heading">Delivered Projects</h2>
+                <p class="p-heading">
+                    Some of the most representative projects I've worked on
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="project-marquee">
+        <div class="project-track">
+
+            <!-- Card 1 -->
+            <div class="project-card">
+                <img src="images/Project-1.png" alt="Resume Parsing App">
+                <h5>Resume Parsing App</h5>
+                <p>Neo Kinetic Services</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="project-card">
+                <img src="images/Project-2.png" alt="CRM Tool">
+                <h5>CRM Tool</h5>
+                <p>Neo Kinetic Services</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="project-card">
+                <img src="images/Project-3.png" alt="Web Scraping Tool">
+                <h5>Web Scraping Tool</h5>
+                <p>Neo Kinetic Services</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="project-card">
+                <img src="images/Project-4.png" alt="Event Management System">
+                <h5>Event Management System</h5>
+                <p>BGSB University</p>
+            </div>
+
+            <!-- DUPLICATE FOR INFINITE LOOP -->
+            <div class="project-card">
+                <img src="images/Project-1.png" alt="Resume Parsing App">
+                <h5>Resume Parsing App</h5>
+                <p>Neo Kinetic Services</p>
+            </div>
+
+            <div class="project-card">
+                <img src="images/Project-2.png" alt="CRM Tool">
+                <h5>CRM Tool</h5>
+                <p>Neo Kinetic Services</p>
+            </div>
+
+        </div>
+    </div>
+</div>
     <!-- end of projects -->
 
 
